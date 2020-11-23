@@ -1,13 +1,13 @@
 <script lang="ts">
-	import fetch from 'node-fetch'
+	// import fetch from 'node-fetch'
 	import { onMount } from 'svelte'
 
-	import type { SkynetApp, SkynetAppCategory, SkynetWebPortal } from '../definitions/skynet'
-	import { skynetAppCategories, knownSkynetWebPortals } from '../definitions/skynet'
+	import type { SkynetApp, SkynetAppCategory, SkynetWebPortal } from './definitions/skynet'
+	import { skynetAppCategories, knownSkynetWebPortals } from './definitions/skynet'
 
 
 	const getApps = async () => {
-		let { result: apps } = await fetch(`https://skynethub-api.herokuapp.com/skapps?limit=500`)
+		let { result: apps } = await globalThis.fetch(`https://skynethub-api.herokuapp.com/skapps?limit=500`)
 			.then(response => response.json())
 		
 		// Hide if "Marked Deleted by Skynethub"
@@ -81,7 +81,7 @@
 		string[0].toUpperCase() + string.slice(1)
 	
 
-	import Loading from '../components/Loading.svelte'
+	import Loading from './Loading.svelte'
 
 	import { fly, scale } from 'svelte/transition'
 	import { flip } from 'svelte/animate'
@@ -225,10 +225,6 @@
 		to { transform: translateX(60vw); }
 	}
 </style>
-
-<svelte:head>
-	<title>SkyStore</title>
-</svelte:head>
 
 <header in:fly={{x: 300}} out:fly={{x: -300}}>
 	<h1 class="logo"><color>Sky</color>Store</h1>

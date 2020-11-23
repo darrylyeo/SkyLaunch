@@ -171,6 +171,25 @@ color {
 
 
 
+body {
+	display: grid;
+	grid:
+		"header" auto
+		"main" 1fr
+		"footer" auto;
+	justify-content: center;
+	min-height: 100vh;
+	gap: 1rem;
+}
+
+body > * {
+	max-width: var(--one-column-width)
+}
+
+
+
+
+
 .card {
 	display: grid;
 	gap: var(--padding-inner);
