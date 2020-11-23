@@ -226,8 +226,12 @@
 	}
 </style>
 
+<svelte:head>
+	<title>SkyLaunch</title>
+</svelte:head>
+
 <header in:fly={{x: 300}} out:fly={{x: -300}}>
-	<h1 class="logo"><color>Sky</color>Store</h1>
+	<h1 class="logo"><color>Sky</color>Launch</h1>
 	<h2>your gateway to the best dApps on <a href="https://siasky.net"><img src="Skynet Logo.svg" height="40"> <img alt="Skynet" src="Skynet Wordmark.svg" height="30"></a></h2>
 </header>
 
@@ -315,7 +319,7 @@
 		</label>
 		<!-- <p>Source: <a href="https://github.com/skynethubio/SkyAppStore">SkyAppStore by Skynethub.io</a></p> -->
 		<div>
-			<small><span class="faded">SkyStore v0.0.1</span> • <strong><a href="https://github.com/darrylyeo/SkyStore">GitHub</a></strong></small>
+			<small><span class="faded">SkyLaunch v0.0.1</span> • <strong><a href="https://github.com/darrylyeo/SkyLaunch">GitHub</a></strong></small>
 		</div>
 	</div>
 </footer>
