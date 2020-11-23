@@ -136,6 +136,15 @@
 	}
 
 
+	.row {
+		display: flex;
+		gap: var(--padding-inner);
+		--padding-inner: 1.5rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
 	.apps-toolbar {
 		position: sticky;
 		width: 100%;
@@ -190,11 +199,8 @@
 		font-size: 0.9em;
 	}
 
-	.row {
-		display: flex;
-		gap: var(--padding-inner);
-		justify-content: space-between;
-		align-items: center;
+	.faded {
+		opacity: 0.62;
 	}
 
 	.clouds {
@@ -226,7 +232,7 @@
 
 <header in:fly={{x: 300}} out:fly={{x: -300}}>
 	<h1 class="logo"><color>Sky</color>Store</h1>
-	<h2>your gateway to the best dApps on <img src="Skynet Logo.svg" height="40"> <img alt="Skynet" src="Skynet Wordmark.svg" height="30"></h2>
+	<h2>your gateway to the best dApps on <a href="https://siasky.net"><img src="Skynet Logo.svg" height="40"> <img alt="Skynet" src="Skynet Wordmark.svg" height="30"></a></h2>
 </header>
 
 <main id="apps">
@@ -236,13 +242,13 @@
 		</Loading>
 	{:then}
 		{#if visibleApps}
-			<div class="apps-toolbar card bar">
+			<div class="apps-toolbar card row">
 				<h2 class="count">{visibleApps.length} dApp{visibleApps.length !== 1 ? 's' : ''} found</h2>
 
-				<input class="search-field" type="text" placeholder="Search dApps..." bind:value={searchQuery} />
+				<input class="search-field" type="search" placeholder="Search dApps..." bind:value={searchQuery} />
 
 				<label>
-					<span>Filter by Category:</span>
+					<strong>Filter by Category:</strong>
 					<select bind:value={categoryFilter}>
 						<option value="all">all</option>
 						{#each skynetAppCategories as appCategory}
@@ -299,9 +305,11 @@
 
 <footer class="card">
 	<div class="row">
-		<p>Powered by <a href="https://siasky.net"><img src="Skynet Logo.svg" height="20"> <img alt="Skynet" src="Skynet Wordmark.svg" height="20"></a></p>
+		<div>
+			<small><span class="faded">Powered by</span> <a href="https://siasky.net"><img src="Skynet Logo.svg" height="20"> <img alt="Skynet" src="Skynet Wordmark.svg" height="18"></a></small>
+		</div>
 		<label>
-			<span>Preferred Skynet Portal: </span>
+			<strong>Preferred Skynet Portal: </strong>
 			<select bind:value={preferredSkynetPortal}>
 				<option value="none">None (no override)</option>
 				{#each knownSkynetWebPortals as portalDomain}
@@ -309,7 +317,10 @@
 				{/each}
 			</select>
 		</label>
-		<p>Source: <a href="https://github.com/skynethubio/SkyAppStore">SkyAppStore by Skynethub.io</a></p>
+		<!-- <p>Source: <a href="https://github.com/skynethubio/SkyAppStore">SkyAppStore by Skynethub.io</a></p> -->
+		<div>
+			<small><span class="faded">SkyStore v0.0.1</span> • <strong><a href="https://github.com/darrylyeo/SkyStore">GitHub</a></strong></small>
+		</div>
 	</div>
 </footer>
 
