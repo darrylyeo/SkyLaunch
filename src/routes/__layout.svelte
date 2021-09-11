@@ -2,8 +2,8 @@
 	// import fetch from 'node-fetch'
 	import { onMount } from 'svelte'
 
-	import type { SkynetApp, SkynetAppCategory, SkynetWebPortal } from './definitions/skynet'
-	import { skynetAppCategories, knownSkynetWebPortals } from './definitions/skynet'
+	import type { SkynetApp, SkynetAppCategory, SkynetWebPortal } from '../types/skynet'
+	import { skynetAppCategories, knownSkynetWebPortals } from '../types/skynet'
 
 
 	const getApps = async () => {
@@ -79,9 +79,11 @@
 
 	const titleCase = string =>
 		string[0].toUpperCase() + string.slice(1)
-	
 
-	import Loading from './Loading.svelte'
+
+	import '../app.css'
+
+	import Loading from '../components/Loading.svelte'
 
 	import { fly, scale } from 'svelte/transition'
 	import { flip } from 'svelte/animate'

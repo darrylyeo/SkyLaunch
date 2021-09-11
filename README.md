@@ -1,12 +1,38 @@
-# SkyLaunch: Your gateway to the best dApps on Skynet.
+# create-svelte
 
-SkyLaunch is the definitive place for discovering community-created apps within [Skynet](https://siasky.net), a decentralized web protocol by [Sia](https://sia.tech). As an improved iteration of an existing project, the [Skynet AppStore](https://github.com/skynethubio/SkyAppStore) (using the same API at skynethub-api.herokuapp.com/skapps), SkyLaunch presents a sleek, hand-crafted user interface complete with filtering, search, and the added ability to choose the Skynet Portal from which to launch a Skynet app. Also... there are animated clouds!
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-[Try it here! (v0.0.1)](https://siasky.net/nAAkTFlVpsgX1-zyEPGy4bNycQW4Jjf2YztegtXHvNIRVw)
+## Creating a project
 
-![](https://siasky.net/_AyDubbSw-QH1M1S8FJi-WnqPSp2r2VD63qeJ3XJCKk7zA)
-![](https://siasky.net/_A7Giml87pNy24ndIEXEIJGol8o5Zt1gvHa9Uv5VTXPlNA)
+If you're seeing this, you've probably already done this step. Congrats!
 
----
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-Created by [Darryl Yeo](https://github.com/darrylyeo) in November 2020 for [The SkyDB Debut](https://gitcoin.co/hackathon/skydb) hackathon.
+# create a new project in my-app
+npm init svelte@next my-app
+```
+
+> Note: the `@next` is temporary
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+
+```bash
+npm run build
+```
+
+> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
