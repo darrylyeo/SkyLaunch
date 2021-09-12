@@ -42,7 +42,7 @@
 <div class="loading card" transition:scale>
 	<span class="icon {iconAnimation}">
 		<slot name="icon">
-			<img src="Skynet Logo.svg" height="30">
+			<img src="Skynet-Logo.svg" height="30">
 		</slot>
 	</span>
 	<slot></slot>

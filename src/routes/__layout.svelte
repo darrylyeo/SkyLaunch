@@ -234,7 +234,7 @@
 
 <header in:fly={{x: 300}} out:fly={{x: -300}}>
 	<h1 class="logo"><color>Sky</color>Launch</h1>
-	<h2>your gateway to the best dApps on <a href="https://siasky.net"><img src="Skynet Logo.svg" height="40"> <img alt="Skynet" src="Skynet Wordmark.svg" height="30"></a></h2>
+	<h2>your gateway to the best dApps on <a href="https://siasky.net"><img src="Skynet-Logo.svg" height="40"> <img alt="Skynet" src="Skynet-Wordmark.svg" height="30"></a></h2>
 </header>
 
 <main id="apps">
@@ -308,7 +308,7 @@
 <footer class="card">
 	<div class="row">
 		<div>
-			<small><span class="faded">Powered by</span> <a href="https://siasky.net"><img src="Skynet Logo.svg" height="20"> <img alt="Skynet" src="Skynet Wordmark.svg" height="18"></a></small>
+			<small><span class="faded">Powered by</span> <a href="https://siasky.net"><img src="Skynet-Logo.svg" height="20"> <img alt="Skynet" src="Skynet-Wordmark.svg" height="18"></a></small>
 		</div>
 		<label>
 			<strong>Preferred Skynet Portal: </strong>
